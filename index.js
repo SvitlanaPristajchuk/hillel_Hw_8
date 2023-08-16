@@ -15,7 +15,7 @@ food = [
 ];
 
 
-function getInfo(arr) {
+function getInfo(arr, info) {
     arrNew = []
     for (i = 0; i < arr.length; i++) {
         currentEl = arr[i]
@@ -37,9 +37,11 @@ function getInfo(arr) {
     }
 
 
-    document.write(`<table> ${arrNew.join(``)}
+    document.write(`<table> 
+    <caption>${info}</caption>
+    ${arrNew.join(``)}
     </table>`)
 }
 
-getInfo(animals)
-getInfo(food)
+getInfo(animals, 'Animals')
+getInfo(food, 'Food')
